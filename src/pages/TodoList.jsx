@@ -18,6 +18,12 @@ function TodoList() {
       body: "리액트 심화를 공부해봅시다.",
       isDone: false,
     },
+    {
+      id: 3,
+      title: "리액트3 공부하기",
+      body: "리액트와 가상DOM을 공부해봅시다.",
+      isDone: false,
+    },
   ]);
   // const todoList = {odj}라고 선언한 것을 바꾸기위해서는 state 사용
 
