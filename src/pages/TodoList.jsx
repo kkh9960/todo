@@ -4,28 +4,32 @@ import Header from "../components/header/Header";
 import Layout from "../components/layout/Layout";
 import List from "../components/list/List";
 
-const TodoList = () => {
-  const [todos, setTodos] = useState([
+function TodoList() {
+  const [todoList, setTodoList] = useState([
     {
       id: 1,
       title: "리액트 공부하기",
       body: "리액트 기초를 공부해봅시다.",
-      isDone: false,
+      isDone: true,
     },
     {
       id: 2,
       title: "리액트2 공부하기",
       body: "리액트 심화를 공부해봅시다.",
-      isDone: true,
+      isDone: false,
     },
   ]);
+  // const todoList = {odj}라고 선언한 것을 바꾸기위해서는 state 사용
 
   return (
-    <Layout>
-      <Header />
-      <Form setTodos={setTodos} todos={todos} />
-      <List todos={todos} setTodos={setTodos} />
+    <Layout> 
+      <Header/>
+      <Form todoList={todoList} setTodoList = {setTodoList}/>
+      <List todoList={todoList} setTodoList = {setTodoList}/>
     </Layout>
+    // <Layout>
+    // props.children을 사용해서 Layout사이에 있는 값을 모두 넘겨줌
+    // </Layout>
   );
 };
 

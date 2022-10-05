@@ -1,5 +1,7 @@
 .list-container {
   padding: 0 24px;
+  border: 1px solid black;
+  border-radius: 10px;
 }
 .h2 {
   display: block;
