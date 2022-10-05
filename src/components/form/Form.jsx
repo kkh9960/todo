@@ -36,6 +36,9 @@ function Form({ todoList, setTodoList }) {
     // todo에는 기본구문 써 넣어준다.
     };
     let idNum = todoList[todoList.length-1].id + 1
+    // id값을 추가해야 하는데 todoList는 배열이니까 배열의 인덱스는
+    // 0부터시작하니까 길이에서 1을 빼줘야 지금까지 있는 배열의 마지막
+    // 인덱스가 나오게 되고 그 인덱스의 id값에서 1을 더해주면 된다.
 
 
   return (
