@@ -1,25 +1,10 @@
 import React from "react";
-// src/App.js
+import TodoList from "./pages/TodoList";
 
 function App() {
-  const handleClick = () => {
-    alert("클릭!");
-  };
-
-  return (
-    <div
-      style={{
-        height: "100vh",
-        display: " flex",
-        flexDirection: "column",
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <span>이것은 내가 만든 App컴포넌트 입니다</span>
-      <button onClick={handleClick}>클릭!</button>
-    </div>
-  );
+  return <TodoList />;
+  // App은 기본실행 >> todoList가 페이지 폴더안에 담겨있으니 페이지에있는
+  //TodoList..jsx파일에 그려서 렌더링 해야한다.
 }
 
 export default App;
