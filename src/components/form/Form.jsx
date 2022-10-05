@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import "./style.css";
 
-// let number = 3;
-// // 앞에 2개 작성해서 3번부터 시작
 function Form({ todoList, setTodoList }) {
   //props로 받아야겠지만, 구조분해 할당을 사용해 todo와 setTodo로 나눔
   const initialState = {
