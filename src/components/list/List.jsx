@@ -46,7 +46,6 @@ function List({ todoList, setTodoList }) {
               <Todo
                 todo={todo}
                 key={todo.id}
-                setTodoList={setTodoList}
                 Delete={Delete}
                 Move={Move}
               />
@@ -67,7 +66,6 @@ function List({ todoList, setTodoList }) {
               <Todo
                 todo={todo}
                 key={todo.id}
-                setTodoList={setTodoList}
                 Delete={Delete}
                 Move={Move}
               />
