@@ -28,14 +28,17 @@ function Form({ todoList, setTodoList }) {
     //작성 이벤트 핸들러
     event.preventDefault();
     // // 이벤트를 명시적으로 시행하지 않으면 실행하지 않도록 지정
+    const maxId = todoList.reduce((pre, cur) => {
+      return pre > cur.id ? pre : cur.id
+    })
     if (todo.title.trim() === "" || todo.body.trim() === "") return;
     // todo에 타이틀과 바디에 띄어쓰기 빼고 아무것도 없으면 리턴해라
-    setTodoList([...todoList, { ...todo, id: idNum }]);
+    setTodoList([...todoList, { ...todo, id: maxId+1 }]);
     // todoList에 전개구문써서 붙여준다. TodoList랑, 아이디 번호
     setTodo(initialState); // 빈칸 초기화
     // todo에는 기본구문 써 넣어준다.
     };
-    let idNum = todoList[todoList.length-1].id + 1
+    let idNum = 3
     // id값을 추가해야 하는데 todoList는 배열이니까 배열의 인덱스는
     // 0부터시작하니까 길이에서 1을 빼줘야 지금까지 있는 배열의 마지막
     // 인덱스가 나오게 되고 그 인덱스의 id값에서 1을 더해주면 된다.
