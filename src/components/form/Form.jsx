@@ -28,7 +28,7 @@ function Form({ todoList, setTodoList }) {
     //작성 이벤트 핸들러
     event.preventDefault();
     // // 이벤트를 명시적으로 시행하지 않으면 실행하지 않도록 지정
-    if (todo.title.trim() === "" || todo.body.trim() === "") return;
+    if (todo.title.trim() === "" || todo.body.trim() === "") return alert("제목과 내용 모두 입력하세요!");
     // todo에 타이틀과 바디에 띄어쓰기 빼고 아무것도 없으면 리턴해라
     setTodoList([...todoList, { ...todo, id: todoId }]);
     // todoList에 전개구문써서 붙여준다. TodoList랑, 아이디 번호
