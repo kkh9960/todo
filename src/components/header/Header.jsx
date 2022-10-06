@@ -11,4 +11,4 @@ function Header () {
   }
   //단순히 글자를 써 넣은 것.
 
-export default Header
+export default Header;
